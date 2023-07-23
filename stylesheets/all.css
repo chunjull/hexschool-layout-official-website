@@ -56,4 +56,119 @@ table {
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  font-family: Noto Sans TC, sans-serif, serif;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  font-family: Noto Sans TC, sans-serif, serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+header {
+  background-color: #AA0601;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+header .logo {
+  width: 80px;
+}
+header .navbar {
+  gap: 4rem;
+}
+header .navbar a {
+  color: #fff;
+}
+
+footer {
+  background-color: #AA0601;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+footer .footerNavbar {
+  gap: 3rem;
+}
+footer .footerNavbar .footerNavItem a {
+  color: #fff;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.justify-content-flex-start {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.justify-content-flex-end {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.justify-content-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.justify-content-space-around {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.justify-content-space-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.align-items-flex-start {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.align-items-flex-end {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.align-items-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.align-items-stretch {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.align-items-baseline {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.container {
+  max-width: 1296px;
+  margin: 0 auto;
+  padding: 0 12px;
 }/*# sourceMappingURL=all.css.map */

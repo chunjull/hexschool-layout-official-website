@@ -1,0 +1,13 @@
+footer {
+    background-color: $primary;
+    padding-top: map-get($spacers, 11);
+    padding-bottom: map-get($spacers, 8);
+
+    .footerNavbar {
+        gap: map-get($spacers, 11);
+
+        .footerNavItem a {
+            color: $white;
+        }
+    }
+}
