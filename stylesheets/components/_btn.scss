@@ -1,0 +1,16 @@
+.btn {
+    border: none;
+    background-color: $primary;
+    
+    a {
+        color: $white;
+    }
+
+    &:hover {
+        background-color: $secondary;
+
+        a {
+            color: $primary;
+        }
+    }
+}

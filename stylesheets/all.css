@@ -86,8 +86,34 @@ header .logo {
 header .navbar {
   gap: 4rem;
 }
-header .navbar a {
+header .navbar .navItem a {
   color: #fff;
+  display: inline-block;
+  position: relative;
+}
+header .navbar .navItem a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 1px;
+  border-radius: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+header .navbar .navItem a:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
 }
 
 footer {
@@ -95,11 +121,143 @@ footer {
   padding-top: 3rem;
   padding-bottom: 2rem;
 }
-footer .footerNavbar {
+footer .linkList {
+  margin-bottom: 1.5rem;
+}
+footer .linkList .footerNavbar {
   gap: 3rem;
 }
-footer .footerNavbar .footerNavItem a {
+footer .linkList .footerNavbar .footerNavItem a {
   color: #fff;
+  display: inline-block;
+  position: relative;
+}
+footer .linkList .footerNavbar .footerNavItem a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 1px;
+  border-radius: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+footer .linkList .footerNavbar .footerNavItem a:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+footer .linkList .socialList {
+  font-size: 3rem;
+  gap: 2rem;
+}
+footer .linkList .socialList a:hover .fa-brands {
+  color: #DCDCDC;
+}
+footer .linkList .socialList a .fa-brands {
+  color: #fff;
+}
+footer .contactList {
+  margin-bottom: 2rem;
+}
+footer .contactList a {
+  color: #fff;
+  font-size: 2.25rem;
+}
+footer .contactList a:hover {
+  color: #DCDCDC;
+}
+footer .contactList a span {
+  vertical-align: middle;
+  font-size: 2.25rem;
+  margin-right: 1.25rem;
+}
+footer .copyrightList {
+  padding-top: 2rem;
+  border-top: 1px solid #fff;
+}
+footer .copyrightList .copyrightItem {
+  color: #fff;
+}
+footer .copyrightList .termsList {
+  gap: 3rem;
+}
+footer .copyrightList .termsList .termsItem a {
+  color: #fff;
+  display: inline-block;
+  position: relative;
+}
+footer .copyrightList .termsList .termsItem a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 1px;
+  border-radius: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+footer .copyrightList .termsList .termsItem a:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+.bgBannerCover {
+  background-size: cover;
+  background-image: url("../../assets/home-header.png");
+}
+
+.bgSecondary {
+  background-color: #FBF2F2;
+}
+
+.bgDesignCover {
+  background-size: cover;
+  background-image: url("../../assets/index-bg.png");
+}
+
+.btn {
+  border: none;
+  background-color: #AA0601;
+}
+.btn a {
+  color: #fff;
+}
+.btn:hover {
+  background-color: #FBF2F2;
+}
+.btn:hover a {
+  color: #AA0601;
+}
+
+.container {
+  max-width: 1296px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+.containerSm {
+  max-width: 636px;
+  margin: 0 auto;
 }
 
 .d-flex {
@@ -167,8 +325,322 @@ footer .footerNavbar .footerNavItem a {
           align-items: baseline;
 }
 
-.container {
-  max-width: 1296px;
-  margin: 0 auto;
-  padding: 0 12px;
+.mb-1 {
+  margin-bottom: 8px;
+}
+
+.banner {
+  padding-top: 18.5rem;
+  padding-bottom: 18.5rem;
+  text-align: right;
+  margin-left: auto;
+}
+.banner h2 {
+  font-size: 2rem;
+  color: #650300;
+}
+.banner .bannerContentMain {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.banner .bannerBtn {
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+}
+.banner .bannerBtn a {
+  font-size: 1.25rem;
+}
+
+.service {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.service h3 {
+  text-align: center;
+  font-size: 3rem;
+  color: #650300;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.service .serviceList {
+  gap: 1.5rem;
+}
+.service .serviceList .serviceItem {
+  width: 23.6%;
+  text-align: center;
+}
+.service .serviceList .serviceItem span {
+  color: #650300;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+.service .serviceList .serviceItem h4 {
+  color: #650300;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.service .serviceList .serviceItem p {
+  text-align: left;
+}
+
+.glass {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.glass h3 {
+  text-align: center;
+  font-size: 3rem;
+  color: #650300;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+.glass .glassList {
+  gap: 1.5rem;
+}
+.glass .glassList .glassItem {
+  text-align: center;
+}
+.glass .glassList .glassItem img {
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
+}
+.glass .glassList .glassItem:hover img {
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.glass .glassList .glassItem h4 {
+  font-family: Roboto, sans-serif, serif;
+  color: #AA0601;
+  font-size: 3rem;
+  font-weight: 900;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+.design {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.design h3 {
+  text-align: center;
+  font-size: 3rem;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.design .designItem img {
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
+}
+.design .designItem:hover img {
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.design .designItem h4 {
+  color: #AA0601;
+  font-size: 3rem;
+  font-family: Roboto, sans-serif, serif;
+  font-weight: 900;
+  text-align: center;
+  background-color: #fff;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.comment {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.comment h3 {
+  text-align: center;
+  font-size: 3rem;
+  color: #650300;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.comment .commentList {
+  gap: 1.5rem;
+}
+.comment .commentList .commentItem {
+  width: 23.6%;
+  border: 1px solid #DEE2E6;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.29);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.29);
+}
+.comment .commentList .commentItem:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+.comment .commentList .commentItem .commentContent {
+  padding: 1rem;
+}
+.comment .commentList .commentItem .commentContent .commentName {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.comment .commentList .commentItem .commentContent .commentText {
+  margin-bottom: 4rem;
+}
+.comment .commentList .commentItem .commentContent .commentDate {
+  font-size: 0.875rem;
+  color: #707070;
+  margin-top: 0.5rem;
+}
+
+.contact {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.contact h3 {
+  text-align: center;
+  font-size: 3rem;
+  color: #650300;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.contact p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.contact input {
+  width: 100%;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  padding-left: 0.75rem;
+  background-color: #FBF2F2;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #000;
+}
+.contact textarea {
+  width: 100%;
+  height: 136px;
+  padding-top: 0.375rem;
+  padding-left: 0.75rem;
+  background-color: #FBF2F2;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #000;
+}
+.contact .checkbox {
+  width: auto;
+}
+.contact .submitBtn {
+  width: 65.5%;
+  border: none;
+  background-color: #AA0601;
+  color: #fff;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.contact .submitBtn:hover {
+  background-color: #650300;
+  cursor: pointer;
+}
+
+.location {
+  padding-top: 6rem;
+  padding-bottom: 5rem;
+}
+.location h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  border-left: 8px solid #AA0601;
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+}
+.location label {
+  font-size: 1.5rem;
+  padding-right: 1rem;
+}
+.location select {
+  width: 23.5%;
+  font-size: 1.5rem;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  color: #495057;
+  position: relative;
+}
+.location .locationList {
+  margin-top: 2.5rem;
+  gap: 1.5rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.location .locationList .locationItem {
+  width: 32%;
+}
+.location .locationList .locationItem .locationTitle {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.location .locationList .locationItem .locationTitle h5 {
+  color: #000;
+  font-size: 1.5rem;
+}
+.location .locationList .locationItem .locationTextList {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.location .locationList .locationItem .locationTextList .locationTextItem a {
+  color: #000;
+}
+.location .locationList .locationItem .locationTextList .locationTextItem span {
+  vertical-align: middle;
+  margin-right: 0.75rem;
+}
+.location .locationList .locationItem button {
+  border: none;
+  width: 100%;
+  background-color: #000;
+  display: block;
+}
+.location .locationList .locationItem button a {
+  color: #fff;
+  font-size: 1.1875rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.faq {
+  padding-top: 6rem;
+  padding-bottom: 5rem;
+}
+.faq h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  border-left: 8px solid #AA0601;
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+}
+.faq h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.faq .faqItem ~ .faqItem {
+  margin-top: 2rem;
+}
+.faq h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
 }/*# sourceMappingURL=all.css.map */

@@ -3,11 +3,108 @@ footer {
     padding-top: map-get($spacers, 11);
     padding-bottom: map-get($spacers, 8);
 
-    .footerNavbar {
-        gap: map-get($spacers, 11);
+    .linkList {
+        margin-bottom: map-get($spacers, 7);
 
-        .footerNavItem a {
+        .footerNavbar {
+            gap: map-get($spacers, 11);
+    
+            .footerNavItem a {
+                color: $white;
+                display: inline-block;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    transform: scaleX(0);
+                    height: 1px;
+                    border-radius: 4px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: $white;
+                    transform-origin: bottom right;
+                    transition: transform 0.25s ease-out;
+                }
+    
+                &:hover::after {
+                    transform: scaleX(1);
+                    transform-origin: bottom left;
+                }
+            }
+        }
+    
+        .socialList {
+            font-size: map-get($font-size, 10);
+            gap: map-get($spacers, 8);
+
+            a {
+                &:hover .fa-brands{
+                    color: $gray-300;
+                }
+
+                .fa-brands {
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    .contactList {
+        margin-bottom: map-get($spacers, 8);
+
+        a {
             color: $white;
+            font-size: map-get($font-size, 8);
+
+            &:hover {
+                color: $gray-300;
+            }
+
+            span {
+                vertical-align: middle;
+                font-size: map-get($font-size, 8);
+                margin-right: map-get($spacers, 6);
+            }
+        }
+    }
+
+    .copyrightList {
+        padding-top: map-get($spacers, 8);
+        border-top: 1px solid $white;
+
+        .copyrightItem {
+            color: $white;
+        }
+
+        .termsList {
+            gap: map-get($spacers, 11);
+
+            .termsItem a {
+                color: $white;
+                display: inline-block;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    transform: scaleX(0);
+                    height: 1px;
+                    border-radius: 4px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: $white;
+                    transform-origin: bottom right;
+                    transition: transform 0.25s ease-out;
+                }
+    
+                &:hover::after {
+                    transform: scaleX(1);
+                    transform-origin: bottom left;
+                }
+            }
         }
     }
 }

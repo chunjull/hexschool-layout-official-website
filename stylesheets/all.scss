@@ -5,8 +5,11 @@
 @import "./layout/header";
 @import "./layout/footer";
 // components
-@import "./components/display-flex";
+@import "./components/bg";
+@import "./components/btn";
 @import "./components/container";
+@import "./components/display-flex";
+@import "./components/mb";
 
 @import "./pages/index";
 @import "./pages/optical";

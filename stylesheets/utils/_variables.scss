@@ -68,6 +68,7 @@ $spacers: (
     12: $spacer * 4, //64px
     13: $spacer * 5, // 80px
     14: $spacer * 6, //96px
+    15: $spacer * 18.5, //296px
 ) !default;
 
 // Typography
@@ -90,6 +91,7 @@ $font-size: (
     9: $font-size-base * 2.265, //42px
     10: $font-size-base * 3, //48px
     11: $font-size-base * 4, //64px
+    12: $font-size-base * 6.25, //100px
 ) !default;
 
 $font-weight-regular: 400 !default;
