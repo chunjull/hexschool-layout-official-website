@@ -1,0 +1,84 @@
+.location {
+    padding-top: map-get($spacers, 14);
+    padding-bottom: map-get($spacers, 13);
+
+    h2 {
+        font-size: map-get($font-size, 10);
+        font-weight: map-get($font-weight, 3);
+        border-left: 8px solid $primary;
+        padding-left: map-get($spacers, 5);
+        margin-bottom: map-get($spacers, 8);
+    }
+
+    label {
+        font-size: map-get($font-size, 6);
+        padding-right: map-get($spacers, 5);
+    }
+
+    select {
+        width: 23.5%;
+        font-size: map-get($font-size, 6);
+        padding-top: map-get($spacers, 2);
+        padding-bottom: map-get($spacers, 2);
+        padding-left: map-get($spacers, 4);
+        padding-right: map-get($spacers, 4);
+        color: $gray-700;
+        position: relative;
+    }
+
+    .locationList {
+        margin-top: map-get($spacers, 10);
+        gap: map-get($spacers, 7);
+        flex-wrap: wrap;
+
+        .locationItem {
+            width: 32%;
+
+            .locationTitle {
+                padding-top: map-get($spacers, 3);
+                padding-bottom: map-get($spacers, 3);
+                padding-left: map-get($spacers, 7);
+                padding-right: map-get($spacers, 7);
+                border: 1px solid rgba(0, 0, 0, 0.2);
+
+                h5 {
+                    color: $black;
+                    font-size: map-get($font-size, 6);
+                }
+            }
+
+            .locationTextList {
+                padding-top: map-get($spacers, 5);
+                padding-bottom: map-get($spacers, 5);
+                padding-left: map-get($spacers, 7);
+                padding-right: map-get($spacers, 7);
+                border: 1px solid rgba(0, 0, 0, 0.2);
+
+                .locationTextItem {
+                    a {
+                        color: $black;
+                    }
+
+                    span {
+                        vertical-align: middle;
+                        margin-right: map-get($spacers, 4);
+                    }
+                }
+            }
+
+            button {
+                border: none;
+                width: 100%;
+                background-color: $black;
+                display: block;
+                
+                a {
+                    color: $white;
+                    font-size: map-get($font-size, 4);
+                    padding-top: map-get($spacers, 5);
+                    padding-bottom: map-get($spacers, 5);
+                }
+            }
+        }
+    }
+}
