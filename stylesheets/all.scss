@@ -1,6 +1,7 @@
 @import "./base/reset";
 @import "./base/fontStyle";
 @import "./utils/variables";
+@import "./utils/mixin";
 @import "./base/base";
 @import "./layout/header";
 @import "./layout/footer";
@@ -10,11 +11,12 @@
 @import "./components/container";
 @import "./components/display-flex";
 @import "./components/mb";
+@import "./components/tag";
 
 @import "./pages/index";
 @import "./pages/optical";
 @import "./pages/sunglasses";
-@import "./pages/locations";
+@import "./pages/location";
 @import "./pages/locationDetail";
 @import "./pages/faq";
 @import "./pages/blog";

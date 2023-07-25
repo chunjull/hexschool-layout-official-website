@@ -1,6 +1,7 @@
 .bgBannerCover {
     background-size: cover;
     background-image: url("../../assets/home-header.png");
+    background-position: center center;
 }
 
 .bgSecondary {
@@ -10,4 +11,9 @@
 .bgDesignCover {
     background-size: cover;
     background-image: url("../../assets/index-bg.png");
+    background-position: center center;
+}
+
+.bgSuccess {
+    background-color: $success;
 }

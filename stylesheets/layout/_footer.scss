@@ -3,11 +3,25 @@ footer {
     padding-top: map-get($spacers, 11);
     padding-bottom: map-get($spacers, 8);
 
+    @include mobile {
+        padding-top: map-get($spacers, 7);
+        padding-bottom: map-get($spacers, 7);
+
+    }
+
     .linkList {
         margin-bottom: map-get($spacers, 7);
 
+        @include mobile {
+            margin-bottom: 0;
+        }
+
         .footerNavbar {
             gap: map-get($spacers, 11);
+
+            @include mobile {
+                display: none;
+            }
     
             .footerNavItem a {
                 color: $white;
@@ -39,6 +53,12 @@ footer {
             font-size: map-get($font-size, 10);
             gap: map-get($spacers, 8);
 
+            .socialItem {
+                @include pad {
+                    font-size: map-get($font-size, 9);
+                }
+            }
+
             a {
                 &:hover .fa-brands{
                     color: $gray-300;
@@ -47,12 +67,20 @@ footer {
                 .fa-brands {
                     color: $white;
                 }
+
+                @include mobile {
+                    font-size: map-get($font-size, 6);
+                }
             }
         }
     }
 
     .contactList {
         margin-bottom: map-get($spacers, 8);
+
+        @include mobile {
+            margin-bottom: map-get($spacers, 7);
+        }
 
         a {
             color: $white;
@@ -67,6 +95,10 @@ footer {
                 font-size: map-get($font-size, 8);
                 margin-right: map-get($spacers, 6);
             }
+
+            @include mobile {
+                font-size: map-get($font-size, 2);
+            }
         }
     }
 
@@ -74,12 +106,23 @@ footer {
         padding-top: map-get($spacers, 8);
         border-top: 1px solid $white;
 
+        @include mobile {
+            padding-top: map-get($spacers, 5);
+            flex-direction: column;
+            gap: map-get($spacers, 3);
+        }
+
         .copyrightItem {
             color: $white;
         }
 
         .termsList {
             gap: map-get($spacers, 11);
+
+            @include mobile {
+                flex-direction: column;
+                gap: map-get($spacers, 3);
+            }
 
             .termsItem a {
                 color: $white;

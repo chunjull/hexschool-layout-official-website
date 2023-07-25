@@ -1,0 +1,134 @@
+.breadcrumb {
+    padding-top: map-get($spacers, 7);
+    padding-bottom: map-get($spacers, 3);
+
+    li {
+        display: inline;
+        color: $primary;
+
+        a {
+            display: inline;
+            color: $black;
+
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+
+    li+li::before {
+        color: $black;
+        content: "/\00a0";
+    }
+}
+
+.newsTagList {
+    gap: map-get($spacers, 5);
+    margin-bottom: map-get($spacers, 3);
+
+    li:hover a {
+        color: $success;
+    }
+}
+
+.newsContent {
+    gap: map-get($spacers, 7);
+    margin-bottom: map-get($spacers, 13);
+
+    .article {
+        width: 66%;
+
+        h2 {
+            font-size: map-get($font-size, 10);
+        }
+
+        h3 {
+            font-size: map-get($font-size, 6);
+            margin-bottom: map-get($spacers, 5);
+        }
+
+        img {
+            margin-bottom: map-get($spacers, 3);
+        }
+
+        p {
+            color: $gray-600;
+            margin-bottom: map-get($spacers, 10);
+        }
+
+        .share {
+            gap: map-get($spacers, 5);
+            border-bottom: 1px solid $black;
+
+            p {
+                display: inline;
+                color: $black;
+                font-family: $font-family-eng;
+                font-weight: map-get($font-weight, 3);
+            }
+        }
+
+        .shareList {
+            gap: map-get($spacers, 5);
+
+            .shareItem {
+                display: inline-block;
+            }
+
+            .fa-brands {
+                vertical-align: middle;
+                color: $black;
+                font-size: map-get($font-size, 7);
+            }
+        }
+
+        .blogpageList {
+            padding-top: map-get($spacers, 7);
+
+            a {
+                color: $black;
+
+                &:hover {
+                    color: $gray-600;
+
+                    span {
+                        color: $gray-600;
+                    }
+                }
+            }
+
+            span {
+                vertical-align: top;
+                color: $black;
+                margin-right: map-get($spacers, 4);
+                margin-left: map-get($spacers, 4);
+            }
+        }
+    }
+
+    .sidebar {
+        width: 20%;
+
+        h2 {
+            font-family: $font-family-eng;
+            font-size: map-get($font-size, 7);
+            font-weight: map-get($font-weight, 3);
+            color: $primary;
+
+            span {
+                vertical-align: middle;
+                font-size: map-get($font-size, 10);
+                font-weight: map-get($font-weight, 3);
+                color: $primary;
+            }
+        }
+
+        .tagList {
+            gap: map-get($spacers, 7);
+
+            li:hover a {
+                color: $success;
+            }
+        }
+    }
+}

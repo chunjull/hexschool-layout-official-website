@@ -1,18 +1,31 @@
 .banner {
-    padding-top: map-get($spacers, 15);
-    padding-bottom: map-get($spacers, 15);
+    padding-top: map-get($spacers, 16);
+    padding-bottom: map-get($spacers, 16);
     text-align: right;
     margin-left: auto;
+
+    @include mobile {
+        padding-top: map-get($spacers, 15);
+        padding-bottom: map-get($spacers, 15);
+    }
 
     h2 {
         font-size: map-get($spacers, 8);
         color: $success;
+
+        @include mobile {
+            font-size: map-get($font-size, 2);
+        }
     }
 
     .bannerContentMain {
         font-size: map-get($font-size, 11);
         font-weight: map-get($font-weight, 3);
         margin-bottom: map-get($spacers, 1);
+
+        @include mobile {
+            font-size: map-get($font-size, 6);
+        }
     }
 
     .bannerBtn {
@@ -37,14 +50,30 @@
         color: $success;
         font-weight: map-get($font-weight, 3);
         margin-bottom: map-get($spacers, 7);
+
+        @include mobile {
+            font-size: map-get($font-size, 8);
+        }
     }
 
     .serviceList {
         gap: map-get($spacers, 7);
 
+        @include pad {
+            flex-wrap: wrap;
+        }
+
         .serviceItem {
             width: 23.6%;
             text-align: center;
+
+            @include pad {
+                width: 48%;
+            }
+
+            @include mobile {
+                width: 100%;
+            }
 
             span {
                 color: $success;
@@ -76,13 +105,25 @@
         color: $success;
         font-weight: map-get($font-weight, 3);
         margin-bottom: map-get($spacers, 11);
+
+        @include mobile {
+            font-size: map-get($font-size, 8);
+        }
     }
 
     .glassList {
         gap: map-get($spacers, 7);
 
+        @include pad {
+            flex-wrap: wrap;
+        }
+
         .glassItem {
             text-align: center;
+
+            @include pad {
+                width: 100%;
+            }
 
             img {
                 filter: brightness(50%);
@@ -115,27 +156,38 @@
         color: $white;
         font-weight: map-get($font-weight, 3);
         margin-bottom: map-get($spacers, 7);
+
+        @include mobile {
+            font-size: map-get($font-size, 8);
+        }
     }
 
-    .designItem {
-        img {
-            filter: brightness(50%)
+    .designList {
+        @include pad {
+            flex-wrap: wrap;
+            gap: map-get($spacers, 7);
         }
 
-        &:hover img {
-            filter: brightness(100%);
-            transition: all .3s;
-        }
-
-        h4 {
-            color: $primary;
-            font-size: map-get($font-size, 10);
-            font-family: $font-family-eng;
-            font-weight: map-get($font-weight, 4);
-            text-align: center;
-            background-color: $white;
-            padding-top: map-get($spacers, 3);
-            padding-bottom: map-get($spacers, 3);
+        .designItem {
+            img {
+                filter: brightness(50%)
+            }
+    
+            &:hover img {
+                filter: brightness(100%);
+                transition: all .3s;
+            }
+    
+            h4 {
+                color: $primary;
+                font-size: map-get($font-size, 10);
+                font-family: $font-family-eng;
+                font-weight: map-get($font-weight, 4);
+                text-align: center;
+                background-color: $white;
+                padding-top: map-get($spacers, 3);
+                padding-bottom: map-get($spacers, 3);
+            }
         }
     }
 }
@@ -150,10 +202,18 @@
         color: $success;
         font-weight: map-get($font-weight, 3);
         margin-bottom: map-get($spacers, 7);
+
+        @include mobile {
+            font-size: map-get($font-size, 8);
+        }
     }
 
     .commentList {
         gap: map-get($spacers, 7);
+
+        @include pad {
+            flex-wrap: wrap;
+        }
 
         .commentItem {
             width: 23.6%;
@@ -161,10 +221,17 @@
             border-radius: 4px;
             box-shadow: 0 2px 6px rgba(0, 0, 0, .29);
 
+            @include pad {
+                width: 48%;
+            }
+
+            @include mobile {
+                width: 100%;
+            }
+
             &:hover {
                 cursor: pointer;
                 box-shadow: 0 2px 6px rgba(0, 0, 0, .6);
-
             }
 
             .commentContent {
@@ -199,11 +266,19 @@
         color: $success;
         font-weight: map-get($font-weight, 3);
         margin-bottom: map-get($spacers, 7);
+
+        @include mobile {
+            font-size: map-get($font-size, 8);
+        }
     }
 
     p {
         font-size: map-get($font-size, 5);
         margin-bottom: map-get($spacers, 7);
+
+        @include mobile {
+            font-size: map-get($font-size, 2);
+        }
     }
 
     input {
@@ -239,6 +314,10 @@
         color: $white;
         padding-top: map-get($spacers, 5);
         padding-bottom: map-get($spacers, 5);
+
+        @include mobile {
+            width: 100%;
+        }
 
         &:hover {
             background-color: $success;

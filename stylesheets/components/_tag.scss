@@ -1,0 +1,6 @@
+.tag {
+    color: $primary;
+    font-family: $font-family-eng;
+    font-size: map-get($font-size, 6);
+    font-weight: map-get($font-weight, 3);
+}

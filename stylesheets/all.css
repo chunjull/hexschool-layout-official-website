@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -80,11 +81,51 @@ header {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+@media (max-width: 767px) {
+  header {
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 767px) {
+  header .headerContent {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+  }
+}
 header .logo {
   width: 80px;
 }
+@media (max-width: 767px) {
+  header .logo {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+  }
+}
 header .navbar {
   gap: 4rem;
+}
+@media (max-width: 767px) {
+  header .navbar {
+    width: 100%;
+    gap: 0;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media (max-width: 767px) {
+  header .navbar .navItem {
+    text-align: center;
+    width: 50%;
+    border: 1px solid #fff;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
 }
 header .navbar .navItem a {
   color: #fff;
@@ -121,11 +162,27 @@ footer {
   padding-top: 3rem;
   padding-bottom: 2rem;
 }
+@media (max-width: 767px) {
+  footer {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
 footer .linkList {
   margin-bottom: 1.5rem;
 }
+@media (max-width: 767px) {
+  footer .linkList {
+    margin-bottom: 0;
+  }
+}
 footer .linkList .footerNavbar {
   gap: 3rem;
+}
+@media (max-width: 767px) {
+  footer .linkList .footerNavbar {
+    display: none;
+  }
 }
 footer .linkList .footerNavbar .footerNavItem a {
   color: #fff;
@@ -160,14 +217,29 @@ footer .linkList .socialList {
   font-size: 3rem;
   gap: 2rem;
 }
+@media (max-width: 992px) {
+  footer .linkList .socialList .socialItem {
+    font-size: 2.265rem;
+  }
+}
 footer .linkList .socialList a:hover .fa-brands {
   color: #DCDCDC;
 }
 footer .linkList .socialList a .fa-brands {
   color: #fff;
 }
+@media (max-width: 767px) {
+  footer .linkList .socialList a {
+    font-size: 1.5rem;
+  }
+}
 footer .contactList {
   margin-bottom: 2rem;
+}
+@media (max-width: 767px) {
+  footer .contactList {
+    margin-bottom: 1.5rem;
+  }
 }
 footer .contactList a {
   color: #fff;
@@ -181,15 +253,39 @@ footer .contactList a span {
   font-size: 2.25rem;
   margin-right: 1.25rem;
 }
+@media (max-width: 767px) {
+  footer .contactList a {
+    font-size: 1rem;
+  }
+}
 footer .copyrightList {
   padding-top: 2rem;
   border-top: 1px solid #fff;
+}
+@media (max-width: 767px) {
+  footer .copyrightList {
+    padding-top: 1rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0.5rem;
+  }
 }
 footer .copyrightList .copyrightItem {
   color: #fff;
 }
 footer .copyrightList .termsList {
   gap: 3rem;
+}
+@media (max-width: 767px) {
+  footer .copyrightList .termsList {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0.5rem;
+  }
 }
 footer .copyrightList .termsList .termsItem a {
   color: #fff;
@@ -224,6 +320,7 @@ footer .copyrightList .termsList .termsItem a:hover::after {
 .bgBannerCover {
   background-size: cover;
   background-image: url("../../assets/home-header.png");
+  background-position: center center;
 }
 
 .bgSecondary {
@@ -233,6 +330,11 @@ footer .copyrightList .termsList .termsItem a:hover::after {
 .bgDesignCover {
   background-size: cover;
   background-image: url("../../assets/index-bg.png");
+  background-position: center center;
+}
+
+.bgSuccess {
+  background-color: #650300;
 }
 
 .btn {
@@ -254,10 +356,30 @@ footer .copyrightList .termsList .termsItem a:hover::after {
   margin: 0 auto;
   padding: 0 12px;
 }
+@media (max-width: 992px) {
+  .container {
+    padding: 0 36px;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    padding: 0 12px;
+  }
+}
 
 .containerSm {
   max-width: 636px;
   margin: 0 auto;
+}
+@media (max-width: 992px) {
+  .containerSm {
+    max-width: 576px;
+  }
+}
+@media (max-width: 767px) {
+  .containerSm {
+    padding: 0 12px;
+  }
 }
 
 .d-flex {
@@ -329,20 +451,47 @@ footer .copyrightList .termsList .termsItem a:hover::after {
   margin-bottom: 8px;
 }
 
+.mb-2 {
+  margin-bottom: 60px;
+}
+
+.tag {
+  color: #AA0601;
+  font-family: Roboto, sans-serif, serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
 .banner {
   padding-top: 18.5rem;
   padding-bottom: 18.5rem;
   text-align: right;
   margin-left: auto;
 }
+@media (max-width: 767px) {
+  .banner {
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+  }
+}
 .banner h2 {
   font-size: 2rem;
   color: #650300;
+}
+@media (max-width: 767px) {
+  .banner h2 {
+    font-size: 1rem;
+  }
 }
 .banner .bannerContentMain {
   font-size: 4rem;
   font-weight: 700;
   margin-bottom: 0.25rem;
+}
+@media (max-width: 767px) {
+  .banner .bannerContentMain {
+    font-size: 1.5rem;
+  }
 }
 .banner .bannerBtn {
   padding-top: 0.375rem;
@@ -365,12 +514,33 @@ footer .copyrightList .termsList .termsItem a:hover::after {
   font-weight: 700;
   margin-bottom: 1.5rem;
 }
+@media (max-width: 767px) {
+  .service h3 {
+    font-size: 2.25rem;
+  }
+}
 .service .serviceList {
   gap: 1.5rem;
+}
+@media (max-width: 992px) {
+  .service .serviceList {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 .service .serviceList .serviceItem {
   width: 23.6%;
   text-align: center;
+}
+@media (max-width: 992px) {
+  .service .serviceList .serviceItem {
+    width: 48%;
+  }
+}
+@media (max-width: 767px) {
+  .service .serviceList .serviceItem {
+    width: 100%;
+  }
 }
 .service .serviceList .serviceItem span {
   color: #650300;
@@ -398,11 +568,27 @@ footer .copyrightList .termsList .termsItem a:hover::after {
   font-weight: 700;
   margin-bottom: 3rem;
 }
+@media (max-width: 767px) {
+  .glass h3 {
+    font-size: 2.25rem;
+  }
+}
 .glass .glassList {
   gap: 1.5rem;
 }
+@media (max-width: 992px) {
+  .glass .glassList {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
 .glass .glassList .glassItem {
   text-align: center;
+}
+@media (max-width: 992px) {
+  .glass .glassList .glassItem {
+    width: 100%;
+  }
 }
 .glass .glassList .glassItem img {
   -webkit-filter: brightness(50%);
@@ -434,17 +620,29 @@ footer .copyrightList .termsList .termsItem a:hover::after {
   font-weight: 700;
   margin-bottom: 1.5rem;
 }
-.design .designItem img {
+@media (max-width: 767px) {
+  .design h3 {
+    font-size: 2.25rem;
+  }
+}
+@media (max-width: 992px) {
+  .design .designList {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+}
+.design .designList .designItem img {
   -webkit-filter: brightness(50%);
           filter: brightness(50%);
 }
-.design .designItem:hover img {
+.design .designList .designItem:hover img {
   -webkit-filter: brightness(100%);
           filter: brightness(100%);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-.design .designItem h4 {
+.design .designList .designItem h4 {
   color: #AA0601;
   font-size: 3rem;
   font-family: Roboto, sans-serif, serif;
@@ -466,8 +664,19 @@ footer .copyrightList .termsList .termsItem a:hover::after {
   font-weight: 700;
   margin-bottom: 1.5rem;
 }
+@media (max-width: 767px) {
+  .comment h3 {
+    font-size: 2.25rem;
+  }
+}
 .comment .commentList {
   gap: 1.5rem;
+}
+@media (max-width: 992px) {
+  .comment .commentList {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 .comment .commentList .commentItem {
   width: 23.6%;
@@ -475,6 +684,16 @@ footer .copyrightList .termsList .termsItem a:hover::after {
   border-radius: 4px;
   -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.29);
           box-shadow: 0 2px 6px rgba(0, 0, 0, 0.29);
+}
+@media (max-width: 992px) {
+  .comment .commentList .commentItem {
+    width: 48%;
+  }
+}
+@media (max-width: 767px) {
+  .comment .commentList .commentItem {
+    width: 100%;
+  }
 }
 .comment .commentList .commentItem:hover {
   cursor: pointer;
@@ -508,9 +727,19 @@ footer .copyrightList .termsList .termsItem a:hover::after {
   font-weight: 700;
   margin-bottom: 1.5rem;
 }
+@media (max-width: 767px) {
+  .contact h3 {
+    font-size: 2.25rem;
+  }
+}
 .contact p {
   font-size: 1.25rem;
   margin-bottom: 1.5rem;
+}
+@media (max-width: 767px) {
+  .contact p {
+    font-size: 1rem;
+  }
 }
 .contact input {
   width: 100%;
@@ -543,6 +772,11 @@ footer .copyrightList .termsList .termsItem a:hover::after {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+@media (max-width: 767px) {
+  .contact .submitBtn {
+    width: 100%;
+  }
+}
 .contact .submitBtn:hover {
   background-color: #650300;
   cursor: pointer;
@@ -559,19 +793,30 @@ footer .copyrightList .termsList .termsItem a:hover::after {
   padding-left: 1rem;
   margin-bottom: 2rem;
 }
-.location label {
+.location .styled-select {
+  color: #495057;
+}
+.location .styled-select label {
   font-size: 1.5rem;
   padding-right: 1rem;
 }
-.location select {
+@media (max-width: 767px) {
+  .location .styled-select label {
+    width: 18%;
+  }
+}
+.location .styled-select select {
   width: 23.5%;
   font-size: 1.5rem;
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
-  color: #495057;
-  position: relative;
+}
+@media (max-width: 767px) {
+  .location .styled-select select {
+    width: 80%;
+  }
 }
 .location .locationList {
   margin-top: 2.5rem;
@@ -581,6 +826,19 @@ footer .copyrightList .termsList .termsItem a:hover::after {
 }
 .location .locationList .locationItem {
   width: 32%;
+}
+@media (max-width: 992px) {
+  .location .locationList .locationItem {
+    width: 48%;
+  }
+}
+@media (max-width: 767px) {
+  .location .locationList .locationItem {
+    width: 100%;
+  }
+}
+.location .locationList .locationItem:hover button {
+  background-color: #707070;
 }
 .location .locationList .locationItem .locationTitle {
   padding-top: 0.5rem;
@@ -595,13 +853,19 @@ footer .copyrightList .termsList .termsItem a:hover::after {
 }
 .location .locationList .locationItem .locationTextList {
   padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
+.location .locationList .locationItem .locationTextList .locationTextItem {
+  margin-bottom: 0.5rem;
+}
 .location .locationList .locationItem .locationTextList .locationTextItem a {
   color: #000;
+}
+.location .locationList .locationItem .locationTextList .locationTextItem a:hover {
+  color: #707070;
 }
 .location .locationList .locationItem .locationTextList .locationTextItem span {
   vertical-align: middle;
@@ -618,6 +882,139 @@ footer .copyrightList .termsList .termsItem a:hover::after {
   font-size: 1.1875rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.locationDetail {
+  padding-top: 6rem;
+  padding-bottom: 5rem;
+}
+.locationDetail h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  border-left: 8px solid #AA0601;
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+}
+.locationDetail .styled-select {
+  color: #495057;
+}
+.locationDetail .styled-select label {
+  font-size: 1.5rem;
+  padding-right: 1rem;
+}
+@media (max-width: 767px) {
+  .locationDetail .styled-select label {
+    width: 18%;
+  }
+}
+.locationDetail .styled-select select {
+  width: 23.5%;
+  font-size: 1.5rem;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+@media (max-width: 767px) {
+  .locationDetail .styled-select select {
+    width: 80%;
+  }
+}
+.locationDetail .locationDetailList {
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+@media (max-width: 992px) {
+  .locationDetail .locationDetailList {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+.locationDetail .locationDetailList .locationDetailItem {
+  width: 40%;
+}
+@media (max-width: 992px) {
+  .locationDetail .locationDetailList .locationDetailItem {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 1.5rem;
+  }
+}
+@media (max-width: 767px) {
+  .locationDetail .locationDetailList .locationDetailItem {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media (max-width: 992px) {
+  .locationDetail .locationDetailList .locationDetailItem img {
+    width: 48%;
+  }
+}
+@media (max-width: 767px) {
+  .locationDetail .locationDetailList .locationDetailItem img {
+    width: 100%;
+  }
+}
+@media (max-width: 992px) {
+  .locationDetail .locationDetailList .locationDetailItem .locationContent {
+    width: 48%;
+  }
+}
+@media (max-width: 767px) {
+  .locationDetail .locationDetailList .locationDetailItem .locationContent {
+    width: 100%;
+  }
+}
+.locationDetail .locationDetailList .locationDetailItem .locationTitle {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.locationDetail .locationDetailList .locationDetailItem .locationTitle h5 {
+  color: #000;
+  font-size: 1.5rem;
+}
+.locationDetail .locationDetailList .locationDetailItem .locationTextList {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.locationDetail .locationDetailList .locationDetailItem .locationTextList .locationTextItem {
+  margin-bottom: 0.5rem;
+}
+.locationDetail .locationDetailList .locationDetailItem .locationTextList .locationTextItem a {
+  color: #000;
+}
+.locationDetail .locationDetailList .locationDetailItem .locationTextList .locationTextItem a:hover {
+  color: #707070;
+}
+.locationDetail .locationDetailList .locationDetailItem .locationTextList .locationTextItem span {
+  vertical-align: middle;
+  margin-right: 0.75rem;
+}
+.locationDetail .locationDetailList .locationDetailImage {
+  width: 58%;
+}
+@media (max-width: 992px) {
+  .locationDetail .locationDetailList .locationDetailImage {
+    width: 100%;
+  }
 }
 
 .faq {
@@ -643,4 +1040,210 @@ footer .copyrightList .termsList .termsItem a:hover::after {
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
+}
+
+.blogNav {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.blogNav a {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.blogNav a:hover {
+  color: #FBF2F2;
+}
+.blogNav .blogNavList {
+  gap: 3rem;
+}
+.blogNav .searchBar span {
+  font-size: 2.265rem;
+}
+
+.blog {
+  padding-top: 6rem;
+  padding-bottom: 5rem;
+}
+.blog h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  border-left: 8px solid #AA0601;
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+}
+.blog .articleItem {
+  gap: 1.5rem;
+}
+.blog .articleItem .articleImage {
+  width: 49%;
+}
+.blog .articleItem .articleContent {
+  width: 49%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.blog .articleItem .articleText h4 {
+  color: #650300;
+  font-size: 2rem;
+}
+.blog .articleItem .articleText .subtitle {
+  margin-bottom: 1rem;
+}
+.blog .articleItem .articleText .subtitle p {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.blog .articleItem .articleText .subtitle span {
+  opacity: 0.7;
+}
+.blog .articleItem .articleText p {
+  font-size: 1.25rem;
+}
+.blog .articleItem a {
+  font-family: Roboto, sans-serif, serif;
+  color: #650300;
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+.blog .articleItem a:hover {
+  color: #AA0601;
+}
+.blog .pagination {
+  margin-top: 4rem;
+}
+.blog .pagination a {
+  display: inline-block;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border: 1px solid #707070;
+  color: #707070;
+}
+.blog .pagination a:hover {
+  background-color: #000;
+  color: #fff;
+}
+.blog .pagination .active {
+  background-color: #000;
+  color: #fff;
+}
+.blog .pagination .stress {
+  background-color: #F2F2F2;
+}
+
+.breadcrumb {
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+.breadcrumb li {
+  display: inline;
+  color: #AA0601;
+}
+.breadcrumb li a {
+  display: inline;
+  color: #000;
+}
+.breadcrumb li a:hover {
+  color: #AA0601;
+}
+.breadcrumb li + li::before {
+  color: #000;
+  content: "/ ";
+}
+
+.newsTagList {
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+.newsTagList li:hover a {
+  color: #650300;
+}
+
+.newsContent {
+  gap: 1.5rem;
+  margin-bottom: 5rem;
+}
+.newsContent .article {
+  width: 66%;
+}
+.newsContent .article h2 {
+  font-size: 3rem;
+}
+.newsContent .article h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.newsContent .article img {
+  margin-bottom: 0.5rem;
+}
+.newsContent .article p {
+  color: #555555;
+  margin-bottom: 2.5rem;
+}
+.newsContent .article .share {
+  gap: 1rem;
+  border-bottom: 1px solid #000;
+}
+.newsContent .article .share p {
+  display: inline;
+  color: #000;
+  font-family: Roboto, sans-serif, serif;
+  font-weight: 700;
+}
+.newsContent .article .shareList {
+  gap: 1rem;
+}
+.newsContent .article .shareList .shareItem {
+  display: inline-block;
+}
+.newsContent .article .shareList .fa-brands {
+  vertical-align: middle;
+  color: #000;
+  font-size: 2rem;
+}
+.newsContent .article .blogpageList {
+  padding-top: 1.5rem;
+}
+.newsContent .article .blogpageList a {
+  color: #000;
+}
+.newsContent .article .blogpageList a:hover {
+  color: #555555;
+}
+.newsContent .article .blogpageList a:hover span {
+  color: #555555;
+}
+.newsContent .article .blogpageList span {
+  vertical-align: top;
+  color: #000;
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+}
+.newsContent .sidebar {
+  width: 20%;
+}
+.newsContent .sidebar h2 {
+  font-family: Roboto, sans-serif, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #AA0601;
+}
+.newsContent .sidebar h2 span {
+  vertical-align: middle;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #AA0601;
+}
+.newsContent .sidebar .tagList {
+  gap: 1.5rem;
+}
+.newsContent .sidebar .tagList li:hover a {
+  color: #650300;
 }/*# sourceMappingURL=all.css.map */
