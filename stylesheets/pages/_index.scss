@@ -95,7 +95,7 @@
     }
 }
 
-.glass {
+.classic {
     padding-top: map-get($spacers, 13);
     padding-bottom: map-get($spacers, 13);
 
@@ -111,14 +111,14 @@
         }
     }
 
-    .glassList {
+    .classicList {
         gap: map-get($spacers, 7);
 
         @include pad {
             flex-wrap: wrap;
         }
 
-        .glassItem {
+        .classicItem {
             text-align: center;
 
             @include pad {
@@ -226,6 +226,10 @@
             }
 
             @include mobile {
+                width: 100%;
+            }
+
+            img {
                 width: 100%;
             }
 

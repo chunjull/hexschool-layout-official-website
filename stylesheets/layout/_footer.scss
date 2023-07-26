@@ -9,68 +9,62 @@ footer {
 
     }
 
-    .linkList {
+    .footerNavbar {
+        gap: map-get($spacers, 11);
         margin-bottom: map-get($spacers, 7);
 
         @include mobile {
+            display: none;
             margin-bottom: 0;
         }
 
-        .footerNavbar {
-            gap: map-get($spacers, 11);
+        .footerNavItem a {
+            color: $white;
+            display: inline-block;
+            position: relative;
 
-            @include mobile {
-                display: none;
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                transform: scaleX(0);
+                height: 1px;
+                border-radius: 4px;
+                bottom: 0;
+                left: 0;
+                background-color: $white;
+                transform-origin: bottom right;
+                transition: transform 0.25s ease-out;
             }
-    
-            .footerNavItem a {
-                color: $white;
-                display: inline-block;
-                position: relative;
 
-                &::after {
-                    content: '';
-                    position: absolute;
-                    width: 100%;
-                    transform: scaleX(0);
-                    height: 1px;
-                    border-radius: 4px;
-                    bottom: 0;
-                    left: 0;
-                    background-color: $white;
-                    transform-origin: bottom right;
-                    transition: transform 0.25s ease-out;
-                }
-    
-                &:hover::after {
-                    transform: scaleX(1);
-                    transform-origin: bottom left;
-                }
+            &:hover::after {
+                transform: scaleX(1);
+                transform-origin: bottom left;
             }
         }
-    
-        .socialList {
-            font-size: map-get($font-size, 10);
-            gap: map-get($spacers, 8);
+    }
 
-            .socialItem {
-                @include pad {
-                    font-size: map-get($font-size, 9);
-                }
+    .socialList {
+        font-size: map-get($font-size, 10);
+        gap: map-get($spacers, 8);
+
+        .socialItem {
+            @include pad {
+                font-size: map-get($font-size, 9);
+            }
+        }
+
+        a {
+            &:hover .fa-brands{
+                color: $gray-300;
             }
 
-            a {
-                &:hover .fa-brands{
-                    color: $gray-300;
-                }
+            .fa-brands {
+                color: $white;
+            }
 
-                .fa-brands {
-                    color: $white;
-                }
-
-                @include mobile {
-                    font-size: map-get($font-size, 6);
-                }
+            @include mobile {
+                font-size: map-get($font-size, 6);
             }
         }
     }

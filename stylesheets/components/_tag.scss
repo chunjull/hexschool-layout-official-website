@@ -14,4 +14,8 @@
     font-family: $font-family-eng;
     font-size: map-get($font-size, 6);
     font-weight: map-get($font-weight, 3);
+
+    @include mobile {
+        font-size: map-get($font-size, 2);
+    }
 }
