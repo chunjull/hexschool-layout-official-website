@@ -54,6 +54,10 @@
         p {
             color: $gray-600;
             margin-bottom: map-get($spacers, 10);
+            
+            @include pad {
+                margin-bottom: map-get($spacers, 7);
+            }
         }
 
         .share {
@@ -115,16 +119,28 @@
             font-weight: map-get($font-weight, 3);
             color: $primary;
 
+            @include pad {
+                font-size: map-get($font-size, 2);
+            }
+
             span {
                 vertical-align: middle;
                 font-size: map-get($font-size, 10);
                 font-weight: map-get($font-weight, 3);
                 color: $primary;
+
+                @include pad {
+                    font-size: map-get($font-size, 6);
+                }
             }
         }
 
         .tagList {
             gap: map-get($spacers, 7);
+
+            @include pad {
+                gap: map-get($spacers, 5);
+            }
 
             li:hover a {
                 color: $success;

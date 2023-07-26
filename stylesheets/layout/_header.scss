@@ -42,6 +42,13 @@ header {
                 padding-bottom: map-get($spacers, 4);
             }
 
+            &:hover {
+                @include mobile {
+                    cursor: pointer;
+                    background-color: $success;
+                }
+            }
+
             a {
                 color: $white;
                 display: inline-block;
@@ -59,11 +66,19 @@ header {
                     background-color: $white;
                     transform-origin: bottom right;
                     transition: transform 0.25s ease-out;
+
+                    @include mobile {
+                        display: none;
+                    }
                 }
     
                 &:hover::after {
                     transform: scaleX(1);
                     transform-origin: bottom left;
+
+                    @include mobile {
+                        display: none;
+                    }
                 }
             }
         }

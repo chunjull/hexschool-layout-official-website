@@ -127,6 +127,12 @@ header .navbar {
     padding-bottom: 0.75rem;
   }
 }
+@media (max-width: 767px) {
+  header .navbar .navItem:hover {
+    cursor: pointer;
+    background-color: #650300;
+  }
+}
 header .navbar .navItem a {
   color: #fff;
   display: inline-block;
@@ -150,11 +156,21 @@ header .navbar .navItem a::after {
   transition: transform 0.25s ease-out;
   transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
 }
+@media (max-width: 767px) {
+  header .navbar .navItem a::after {
+    display: none;
+  }
+}
 header .navbar .navItem a:hover::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
+}
+@media (max-width: 767px) {
+  header .navbar .navItem a:hover::after {
+    display: none;
+  }
 }
 
 footer {
@@ -322,6 +338,11 @@ footer .copyrightList .termsList .termsItem a:hover::after {
   background-image: url("../../assets/home-header.png");
   background-position: center center;
 }
+@media (max-width: 992px) {
+  .bgBannerCover {
+    background-image: url("../../assets/home-header-sm.png");
+  }
+}
 
 .bgSecondary {
   background-color: #FBF2F2;
@@ -331,6 +352,16 @@ footer .copyrightList .termsList .termsItem a:hover::after {
   background-size: cover;
   background-image: url("../../assets/index-bg.png");
   background-position: center center;
+}
+@media (max-width: 992px) {
+  .bgDesignCover {
+    background-image: url("../../assets/index-bg-md.png");
+  }
+}
+@media (max-width: 767px) {
+  .bgDesignCover {
+    background-image: url("../../assets/index-bg-sm.png");
+  }
 }
 
 .bgSuccess {
@@ -456,6 +487,18 @@ footer .copyrightList .termsList .termsItem a:hover::after {
 }
 
 .tag {
+  color: #AA0601;
+  font-family: Roboto, sans-serif, serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+@media (max-width: 992px) {
+  .tag {
+    font-size: 1rem;
+  }
+}
+
+.tagMain {
   color: #AA0601;
   font-family: Roboto, sans-serif, serif;
   font-size: 1.5rem;
@@ -782,9 +825,19 @@ footer .copyrightList .termsList .termsItem a:hover::after {
   cursor: pointer;
 }
 
+.bannerOptical img {
+  width: 50%;
+}
+
 .location {
   padding-top: 6rem;
   padding-bottom: 5rem;
+}
+@media (max-width: 767px) {
+  .location {
+    padding-top: 2.5rem;
+    padding-bottom: 4rem;
+  }
 }
 .location h2 {
   font-size: 3rem;
@@ -792,6 +845,12 @@ footer .copyrightList .termsList .termsItem a:hover::after {
   border-left: 8px solid #AA0601;
   padding-left: 1rem;
   margin-bottom: 2rem;
+}
+@media (max-width: 767px) {
+  .location h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
 }
 .location .styled-select {
   color: #495057;
@@ -888,12 +947,24 @@ footer .copyrightList .termsList .termsItem a:hover::after {
   padding-top: 6rem;
   padding-bottom: 5rem;
 }
+@media (max-width: 767px) {
+  .locationDetail {
+    padding-top: 2.5rem;
+    padding-bottom: 4rem;
+  }
+}
 .locationDetail h2 {
   font-size: 3rem;
   font-weight: 700;
   border-left: 8px solid #AA0601;
   padding-left: 1rem;
   margin-bottom: 2rem;
+}
+@media (max-width: 767px) {
+  .locationDetail h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
 }
 .locationDetail .styled-select {
   color: #495057;
@@ -1021,12 +1092,24 @@ footer .copyrightList .termsList .termsItem a:hover::after {
   padding-top: 6rem;
   padding-bottom: 5rem;
 }
+@media (max-width: 767px) {
+  .faq {
+    padding-top: 2.5rem;
+    padding-bottom: 4rem;
+  }
+}
 .faq h2 {
   font-size: 3rem;
   font-weight: 700;
   border-left: 8px solid #AA0601;
   padding-left: 1rem;
   margin-bottom: 2rem;
+}
+@media (max-width: 767px) {
+  .faq h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
 }
 .faq h3 {
   font-size: 1.5rem;
@@ -1035,6 +1118,11 @@ footer .copyrightList .termsList .termsItem a:hover::after {
 }
 .faq .faqItem ~ .faqItem {
   margin-top: 2rem;
+}
+@media (max-width: 767px) {
+  .faq .faqItem ~ .faqItem {
+    margin-top: 1.5rem;
+  }
 }
 .faq h4 {
   font-size: 1.25rem;
@@ -1046,10 +1134,20 @@ footer .copyrightList .termsList .termsItem a:hover::after {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
+@media (max-width: 767px) {
+  .blogNav {
+    display: none;
+  }
+}
 .blogNav a {
   color: #fff;
   font-weight: 700;
   font-size: 1.5rem;
+}
+@media (max-width: 992px) {
+  .blogNav a {
+    font-size: 1.5rem;
+  }
 }
 .blogNav a:hover {
   color: #FBF2F2;
@@ -1065,6 +1163,12 @@ footer .copyrightList .termsList .termsItem a:hover::after {
   padding-top: 6rem;
   padding-bottom: 5rem;
 }
+@media (max-width: 767px) {
+  .blog {
+    padding-top: 2.5rem;
+    padding-bottom: 4rem;
+  }
+}
 .blog h2 {
   font-size: 3rem;
   font-weight: 700;
@@ -1072,11 +1176,31 @@ footer .copyrightList .termsList .termsItem a:hover::after {
   padding-left: 1rem;
   margin-bottom: 2rem;
 }
+@media (max-width: 767px) {
+  .blog h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
 .blog .articleItem {
   gap: 1.5rem;
 }
+@media (max-width: 767px) {
+  .blog .articleItem {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 1.5rem;
+  }
+}
 .blog .articleItem .articleImage {
   width: 49%;
+}
+@media (max-width: 767px) {
+  .blog .articleItem .articleImage {
+    width: 100%;
+  }
 }
 .blog .articleItem .articleContent {
   width: 49%;
@@ -1088,6 +1212,14 @@ footer .copyrightList .termsList .termsItem a:hover::after {
       -ms-flex-align: end;
           align-items: flex-end;
 }
+@media (max-width: 767px) {
+  .blog .articleItem .articleContent {
+    width: 100%;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+}
 .blog .articleItem .articleText h4 {
   color: #650300;
   font-size: 2rem;
@@ -1095,7 +1227,7 @@ footer .copyrightList .termsList .termsItem a:hover::after {
 .blog .articleItem .articleText .subtitle {
   margin-bottom: 1rem;
 }
-.blog .articleItem .articleText .subtitle p {
+.blog .articleItem .articleText .subtitle h5 {
   font-size: 1.25rem;
   font-weight: 700;
 }
@@ -1104,12 +1236,31 @@ footer .copyrightList .termsList .termsItem a:hover::after {
 }
 .blog .articleItem .articleText p {
   font-size: 1.25rem;
+  color: #555555;
+}
+@media (max-width: 767px) {
+  .blog .articleItem .articleText p {
+    display: none;
+  }
 }
 .blog .articleItem a {
   font-family: Roboto, sans-serif, serif;
   color: #650300;
   font-size: 2.25rem;
   font-weight: 700;
+}
+@media (max-width: 992px) {
+  .blog .articleItem a {
+    font-family: Noto Sans TC, sans-serif, serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #555555;
+  }
+}
+@media (max-width: 767px) {
+  .blog .articleItem a {
+    display: none;
+  }
 }
 .blog .articleItem a:hover {
   color: #AA0601;
@@ -1187,6 +1338,11 @@ footer .copyrightList .termsList .termsItem a:hover::after {
   color: #555555;
   margin-bottom: 2.5rem;
 }
+@media (max-width: 992px) {
+  .newsContent .article p {
+    margin-bottom: 1.5rem;
+  }
+}
 .newsContent .article .share {
   gap: 1rem;
   border-bottom: 1px solid #000;
@@ -1235,14 +1391,29 @@ footer .copyrightList .termsList .termsItem a:hover::after {
   font-weight: 700;
   color: #AA0601;
 }
+@media (max-width: 992px) {
+  .newsContent .sidebar h2 {
+    font-size: 1rem;
+  }
+}
 .newsContent .sidebar h2 span {
   vertical-align: middle;
   font-size: 3rem;
   font-weight: 700;
   color: #AA0601;
 }
+@media (max-width: 992px) {
+  .newsContent .sidebar h2 span {
+    font-size: 1.5rem;
+  }
+}
 .newsContent .sidebar .tagList {
   gap: 1.5rem;
+}
+@media (max-width: 992px) {
+  .newsContent .sidebar .tagList {
+    gap: 1rem;
+  }
 }
 .newsContent .sidebar .tagList li:hover a {
   color: #650300;

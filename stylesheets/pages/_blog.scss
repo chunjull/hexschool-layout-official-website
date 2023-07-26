@@ -2,10 +2,18 @@
     padding-top: map-get($spacers, 3);
     padding-bottom: map-get($spacers, 3);
 
+    @include mobile {
+        display: none;
+    }
+
     a {
         color: $white;
         font-weight: map-get($font-weight, 3);
         font-size: map-get($font-size, 6);
+
+        @include pad {
+            font-size: map-get($font-size, 6);
+        }
 
         &:hover {
             color: $secondary;
@@ -25,25 +33,49 @@
     padding-top: map-get($spacers, 14);
     padding-bottom: map-get($spacers, 13);
 
+    @include mobile {
+        padding-top: map-get($spacers, 10);
+        padding-bottom: map-get($spacers, 12);
+    }
+
     h2 {
         font-size: map-get($font-size, 10);
         font-weight: map-get($font-weight, 3);
         border-left: 8px solid $primary;
         padding-left: map-get($spacers, 5);
         margin-bottom: map-get($spacers, 8);
+
+        @include mobile {
+            font-size: map-get($font-size, 6);
+            margin-bottom: map-get($spacers, 7);
+        }
     }
 
     .articleItem {
         gap: map-get($spacers, 7);
 
+        @include mobile {
+            flex-direction: column;
+            margin-bottom: map-get($spacers, 7);
+        }
+
         .articleImage {
             width: 49%;
+
+            @include mobile {
+                width: 100%;
+            }
         }
 
         .articleContent {
             width: 49%;
             flex-direction: column;
             align-items: flex-end;
+
+            @include mobile {
+                width: 100%;
+                align-items: stretch;
+            }
         }
 
         .articleText {
@@ -55,7 +87,7 @@
             .subtitle {
                 margin-bottom: map-get($spacers, 5);
 
-                p {
+                h5 {
                     font-size: map-get($font-size, 5);
                     font-weight: map-get($font-weight, 3);
                 }
@@ -67,6 +99,11 @@
 
             p {
                 font-size: map-get($font-size, 5);
+                color: $gray-600;
+
+                @include mobile {
+                    display: none;
+                }
             }
         }
 
@@ -75,6 +112,17 @@
             color: $success;
             font-size: map-get($font-size, 8);
             font-weight: map-get($font-weight, 3);
+
+            @include pad {
+                font-family: $font-family-base;
+                font-size: map-get($font-size, 5);
+                font-weight: map-get($font-weight, 1);
+                color: $gray-600;
+            }
+
+            @include mobile {
+                display: none;
+            }
 
             &:hover {
                 color: $primary;

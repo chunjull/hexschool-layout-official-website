@@ -2,6 +2,10 @@
     background-size: cover;
     background-image: url("../../assets/home-header.png");
     background-position: center center;
+
+    @include pad {
+        background-image: url("../../assets/home-header-sm.png");
+    }
 }
 
 .bgSecondary {
@@ -12,6 +16,14 @@
     background-size: cover;
     background-image: url("../../assets/index-bg.png");
     background-position: center center;
+
+    @include pad {
+        background-image: url("../../assets/index-bg-md.png");
+    }
+
+    @include mobile {
+        background-image: url("../../assets/index-bg-sm.png");
+    }
 }
 
 .bgSuccess {

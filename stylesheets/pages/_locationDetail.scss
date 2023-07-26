@@ -2,12 +2,22 @@
     padding-top: map-get($spacers, 14);
     padding-bottom: map-get($spacers, 13);
 
+    @include mobile {
+        padding-top: map-get($spacers, 10);
+        padding-bottom: map-get($spacers, 12);
+    }
+
     h2 {
         font-size: map-get($font-size, 10);
         font-weight: map-get($font-weight, 3);
         border-left: 8px solid $primary;
         padding-left: map-get($spacers, 5);
         margin-bottom: map-get($spacers, 8);
+
+        @include mobile {
+            font-size: map-get($font-size, 6);
+            margin-bottom: map-get($spacers, 7);
+        }
     }
 
     .styled-select {
